@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --pink: #e84393;
+    --black: #333;
+    --denbong: rgba(0, 0 ,0, .1);
+    --denbong1: rgba(0, 0 ,0, .3);
+    --denbong2: rgba(255, 52, 153, .05);
+    --trang: #fff;
+    --xam: #999;
+    --xam1: #666;
+    --xam2: #fff7;
+    --do: red;
+    --xanh: blue;
+    --hong: #ffb6ed;
+    --hongbong:rgb(250, 202, 202);
+    --hongbong1:rgb(252, 181, 181);
+    --hongbong2:rgb(248, 156, 156);
+    --xanhla:#006803;
+    --xanhla2:#abffb0;
+    --vang:yellow;
+    
+}
+body {
+    /* font-family: 'Brush Script MT', cursive; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 1px);
+    /* width: calc(100vh - 1px); */
+    background: url(/Images/galaxy-7040416_1280.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 50rem;
+    /* font-family: 'Merienda One',cursive; */
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: var(--do);
+    /* font-family: 'Merienda One',cursive; */
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+    /* font-family: 'Merienda One',cursive; */
+    
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: var(--trang);
+    padding: 1rem 0;
+    line-height: 1.5;
+    /* font-family: 'Merienda One',cursive; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* media queries */
+@media(max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media(max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--trang);
+        border-top: .1rem var(--denbong);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: var(--trang);
+        border: .1rem var(--denbong);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-conttainer .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons-conttainer .icons span {
+        font-size: 1.7rem;
+    }
+
+
+}
+
+@media(max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}

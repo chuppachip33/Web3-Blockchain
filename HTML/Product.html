@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dương Minh Nam</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link css-->
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/About.css">
+    <link rel="stylesheet" href="/CSS/Product.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/Bieudogiohang.css">
+    <link rel="stylesheet" href="/CSS/TestCode.css">
+
+  
+
+
+
+</head>
+
+<!-- header section starts -->
+
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="Home.html" class="logo"> AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home"> Home </a>
+            <a href="#GioHang"> Product </a>
+            <a href="ChuyenCoin.html"> Transaction </a>
+            <a href="KetNoiViSol.html"> Wallet connection </a>
+            <a href="Lịch Sử Giao Dịch Coin.html"> Transaction history </a>
+        </nav>
+        <div class="icons">
+            <a href="Chi Tiết Product.htm" class="fas fa-heart"></a>
+            <a href="Chi Tiết Giỏ Hàng.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <!-- GioHang section Start -->
+    <!-- <div class="container" id="GioHang">
+        <h2>Thị Trường</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Thay đổi</th>
+                    <th>KL/24H</th>
+                    <th>Vốn Hóa thị trường</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BTC Bitcoin</td>
+                    <td><img src="/Images/bitcoin.jfif" alt="" width="20%"></td>
+                    <td>$66,248.00</td>
+                    <td class="positive-change">+3.24%</td>
+                    <td>$26,93B</td>
+                    <td>$1.305,34B</td>
+                    <td>
+                        <a href='ChiTietCoid.html' class='btn btn-primary'>Chi Tiết</a>
+                        <a onclick='confirmDelete' href='BieuDoCoin.html' class='btn btn-danger'>Giao Dịch Ngay</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ETH Ethereum</td>
+                    <td><img src="/Images/ETH.jfif" alt="" width="20%"></td>
+                    <td>$3,488.67</td>
+                    <td class="positive-change">+0.31%</td>
+                    <td>$15,64B</td>
+                    <td>$418,84B</td>
+                    <td>
+                        <a href='ChiTietCoid.html' class='btn btn-primary'>Chi Tiết</a>
+                        <a onclick='confirmDelete' href='BieuDoCoin.html' class='btn btn-danger'>Giao Dịch Ngay</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BNB BNB</td>
+                    <td><img src="/Images/BNB.png" alt="" width="20%"></td>
+                    <td>$603.10</td>
+                    <td class="negative-change">-0.52%</td>
+                    <td>$1.81B</td>
+                    <td>$88.98B</td>
+                    <td>
+                        <a href='ChiTietCoid.html' class='btn btn-primary'>Chi Tiết</a>
+                        <a onclick='confirmDelete' href='BieuDoCoin.html' class='btn btn-danger'>Giao Dịch Ngay</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SOL Solana</td>
+                    <td><img src="/Images/SOL.jfif" alt="" width="20%"></td>
+                    <td>$143.84</td>
+                    <td class="positive-change">+11.52%</td>
+                    <td>$2,22B</td>
+                    <td>$66,35B</td>
+                    <td>
+                        <a href='ChiTietCoid.html' class='btn btn-primary'>Chi Tiết</a>
+                        <a onclick='confirmDelete' href='BieuDoCoin.html' class='btn btn-danger'>Giao Dịch Ngay</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GOGE Dogecoin</td>
+                    <td><img src="/Images/DOGE.jfif" alt="" width="20%"></td>
+                    <td>$0.4108</td>
+                    <td class="negative-change">-0.423%</td>
+                    <td>$849,02M</td>
+                    <td>$19,53B</td>
+                    <td>
+                        <a href='ChiTietCoid.html' class='btn btn-primary'>Chi Tiết</a>
+                        <a onclick='confirmDelete' href='BieuDoCoin.html' class='btn btn-danger'>Giao Dịch Ngay</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- GioHang section End -->
+
+
+
+    <!-- products section starts -->
+    <section class="products" id="products">
+        <h1 class="heading"> Latest <span> Products </span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <span class="discount"> -10% </span>
+                <div class="image">
+                    <img src="/Images/th.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 1 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -15% </span>
+                <div class="image">
+                    <img src="/Images/NFT4.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 2 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -20% </span>
+                <div class="image">
+                    <img src="/Images/NFT5.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 3 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -30% </span>
+                <div class="image">
+                    <img src="/Images/NFT6.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 4 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <span class="discount"> -40% </span>
+                <div class="image">
+                    <img src="/Images/NFT8.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 5 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -25% </span>
+                <div class="image">
+                    <img src="/Images/NFT9.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 6 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -60% </span>
+                <div class="image">
+                    <img src="/Images/NFT11.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 7 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -45% </span>
+                <div class="image">
+                    <img src="/Images/NFT13.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 8 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount"> -65% </span>
+                <div class="image">
+                    <img src="/Images/NFT12.jfif" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="cart-btn"> Add to cart</a>
+                        <a href="Chi Tiết Product.htm" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> NFT 9 </h3>
+                    <div class="price"> $12.99 <span>$15.99 </span> </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- products section ends -->
+
+
+
+    <h1>Notable collections</h1>
+    <div class="product-list-container">
+      <div class="product-list">
+        <!-- Repeat this block for each product -->
+        <div class="product">
+          <img src="/Images/th.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/NFT4.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/NFT5.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/NFT6.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/NFT8.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/NFT9.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/NFT10.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/NFT11.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <h1>Top Collector Buys Today</h1>
+    <div class="product-list-container">
+      <div class="product-list">
+        <!-- Repeat this block for each product -->
+        <div class="product">
+          <img src="/Images/Dog1.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/Dog2.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/dog3.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/dog4.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/dog5.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/dog6.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/dog7.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+        <div class="product">
+          <img src="/Images/dog8.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+  
+        <div class="product">
+          <img src="/Images/dog9.jfif" alt="NFT Image">
+          <h3>Product Name</h3>
+          <div class="product-info">
+            <p>Price: 1.5 ETH</p>
+            <p>Total Volume: 100 ETH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="/JS/TestCode.js"></script>
+
+
+
+
+
+
+
+    <!-- footer section starts -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <nav class="box">
+                <h3> Quick links </h3>
+                <a href="#home"> Home </a>
+                <a href="#about"> Trailer </a>
+                <a href="#products"> Products </a>
+                <a href="#review"> Review </a>
+                <a href="#contact"> Contact </a>
+            </nav>
+
+            <div class="box">
+                <h3> Extra links </h3>
+                <a href="#"> My account </a>
+                <a href="#"> My order </a>
+                <a href="#"> My favorite </a>
+            </div>
+
+            <div class="box">
+                <h3> Locations </h3>
+                <a href="#"> VietNam </a>
+                <a href="#"> USA </a>
+                <a href="#"> Japan </a>
+                <a href="#"> France </a>
+                <a href="#"> Korea </a>
+            </div>
+
+            <div class="box">
+                <h3> Contact Info </h3>
+                <a href="#"> +123-456-7890 </a>
+                <a href="#"> namdmps23583@gmail.com </a>
+                <a href="#"> numba, Vietnam - 24112003 </a>
+                <img src="images/6529a74c68df9e3fbe26892cffd19862.jpg" alt="">
+            </div>
+        </div>
+        <div class="credit"> Created by <span> Dương Minh Nam Designer </span> All rights reseved </div>
+        <!-- <input type="checkbox" class="checkbox"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap"
+            rel="stylesheet">
+
+    </section>
+    <!-- footer section ends -->
+
+    <script>
+        // Hàm để cập nhật ngẫu nhiên giá trị của cột "Thay đổi" và cột "Giá"
+        function updateValues() {
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                // Cập nhật giá trị của cột "Thay đổi"
+                const changeCell = row.querySelector('td:nth-child(4)');
+                let randomChangeValue = (Math.random() * 20 - 10).toFixed(2); // Giá trị ngẫu nhiên từ -10 đến 10
+                let isPositive = randomChangeValue > 0;
+                randomChangeValue = isPositive ? `+${randomChangeValue}%` : `${randomChangeValue}%`;
+
+                // Thay đổi nội dung của ô và lớp CSS
+                changeCell.textContent = randomChangeValue;
+                changeCell.className = isPositive ? 'positive-change' : 'negative-change';
+
+                // Cập nhật giá trị của cột "Giá"
+                const priceCell = row.querySelector('td:nth-child(3)');
+                let currentPrice = parseFloat(priceCell.textContent.replace(/[^0-9.-]+/g, "")); // Lấy giá trị hiện tại và loại bỏ ký tự không phải số
+                let changeFactor = parseFloat(randomChangeValue) / 100; // Tính tỷ lệ thay đổi
+                let newPrice = currentPrice * (1 + changeFactor); // Tính giá trị mới
+                priceCell.textContent = `$${newPrice.toFixed(2)}`; // Cập nhật giá trị mới cho ô giá
+            });
+        }
+
+        // Cập nhật giá trị mỗi 5 giây
+        setInterval(updateValues, 5000);
+    </script>
+</body>
+
+</html>

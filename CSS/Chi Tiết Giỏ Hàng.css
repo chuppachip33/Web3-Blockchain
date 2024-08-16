@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    margin-top: 100px;
+}
+.nft-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.nft-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nft-image {
+    width: 100%;
+    height: auto;
+}
+.nft-details {
+    padding: 10px;
+}
+.nft-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+.nft-meta {
+    font-size: 14px;
+    color: #555;
+}
+.transfer-button, .sell-button, .edit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.transfer-button {
+    background-color: #28a745;
+    color: #fff;
+}
+.transfer-button:hover {
+    background-color: #218838;
+}
+.sell-button {
+    background-color: #007bff;
+    color: #fff;
+}
+.sell-button:hover {
+    background-color: #0056b3;
+}
+.edit-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+.edit-button:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Giao Dịch Coin</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            margin-top: 100px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000000;
+            font-size: 1.2rem;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #000000;
+        }
+    </style>
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/Item.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="Home.html" class="logo"> AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home"> Home </a>
+            <a href="Product.html"> Product </a>
+            <a href="ChuyenCoin.html"> Transaction </a>
+            <a href="KetNoiViSol.html"> Wallet connection </a>
+            <a href="Lịch Sử Giao Dịch Coin.html"> Transaction history </a>
+        </nav>
+        <div class="icons">
+            <a href="Giohang.html" class="fas fa-heart"></a>
+            <a href="ChiTietGioHang.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Lịch Sử Giao Dịch Coin</h2>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Thời Gian</th>
+                        <th>Loại Giao Dịch</th>
+                        <th>Đồng Coin Giao Dich</th>
+                        <th>Số Lượng</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-07-01 10:00:00</td>
+                        <td>Mua</td>
+                        <td>DOGE</td>
+                        <td>10</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-02 14:30:00</td>
+                        <td>Bán</td>
+                        <td>BTC</td>
+                        <td>5</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-03 09:15:00</td>
+                        <td>Mua</td>
+                        <td>ETH</td>
+                        <td>7</td>
+                        <td>$110</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-04 16:45:00</td>
+                        <td>Bán</td>
+                        <td>SOL</td>
+                        <td>8</td>
+                        <td>$115</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-04 16:45:00</td>
+                        <td>Bán</td>
+                        <td>SOL</td>
+                        <td>8</td>
+                        <td>$115</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-04 16:45:00</td>
+                        <td>Bán</td>
+                        <td>SOL</td>
+                        <td>8</td>
+                        <td>$115</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-04 16:45:00</td>
+                        <td>Bán</td>
+                        <td>SOL</td>
+                        <td>8</td>
+                        <td>$115</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

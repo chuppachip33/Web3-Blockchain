@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Container chứa danh sách sản phẩm */
+.product-list-container {
+    width: 90%;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 30px; /* Khoảng cách giữa các khối danh sách sản phẩm */
+    margin-left: 80px;
+}
+
+/* Danh sách sản phẩm */
+.product-list {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa các sản phẩm */
+    white-space: nowrap;
+}
+
+/* Khung của mỗi sản phẩm */
+.product {
+    display: inline-block;
+    width: 300px; /* Chiều rộng của sản phẩm */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px; /* Khoảng cách bên trong của sản phẩm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng hover */
+    cursor: grab; /* Đổi con trỏ khi di chuyển */
+    user-select: none; /* Ngăn chặn chọn văn bản */
+    -webkit-user-drag: none; /* Ngăn chặn kéo hình ảnh */
+}
+
+/* Hình ảnh của sản phẩm */
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* Tên sản phẩm */
+.product h3 {
+    font-size: 1.2em; /* Kích thước chữ của tên sản phẩm */
+    margin: 0;
+}
+
+/* Giá sản phẩm */
+.product p {
+    font-size: 1em; /* Kích thước chữ của giá sản phẩm */
+    color: #555;
+}
+
+/* Hiệu ứng hover */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Con trỏ kéo khi đang kéo */
+.product:active {
+    cursor: grabbing;
+}
+h1{
+    margin-left: 80px;
+}

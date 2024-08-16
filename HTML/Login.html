@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS/Login.css">
+</head>
+<body>
+    <form action="Home.html" accept="index" method="get">
+        <h3>Login Form</h3>
+        <input type="radio" id="login_swich" name="swich" checked />
+        <input type="radio" id="singup_swich" name="swich" />
+        <input type="radio" id="forgot_swich" name="swich" />
+        <span class="label_wap">
+            <label for="login_swich"> Log in </label>
+            <label for="singup_swich"> Sign up </label>
+            <label for="forgot_swich"> Forgot Password </label>
+        </span>
+        <input placeholder="Username"/>
+        <input placeholder="Password" type="password"/>
+        <input placeholder="Confirm password" type="password" id="confirm"/>
+        <input placeholder="Recovery email" type="password" id="forgot"/>
+        <div>
+            <a> <label for="forgot_swich"> Forgot Password? </label></a>
+            <button> Log in </button>
+            <a> <label for="singup_swich"> Create account </label> </a>
+        </div>
+        <div>
+            <button> Sign up </button>
+            <a> <label for="login_swich"> Log in </label> </a>
+        </div>
+        <div>
+            <button> Reset Password </button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Đảm bảo rằng các kiểu CSS này có độ ưu tiên cao hơn */
+
+.profile {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.profile .container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile .container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5em; /* Kích thước chữ */
+}
+
+.profile .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile .profile-info .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile .profile-info .info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile .profile-info .info h2 {
+    font-size: 1.8em; /* Kích thước chữ */
+}
+
+.profile .profile-info .info p {
+    font-size: 1.2em; /* Kích thước chữ */
+}
+
+.profile .actions {
+    text-align: center;
+}
+
+.profile .actions .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em; /* Kích thước chữ */
+}
+
+.profile .actions .btn.btn-primary {
+    background-color: #007bff;
+}
+
+.profile .actions .btn.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.profile .actions .btn.btn-danger {
+    background-color: #dc3545;
+}
+
+.profile .actions .btn.btn-danger:hover {
+    background-color: #c82333;
+}

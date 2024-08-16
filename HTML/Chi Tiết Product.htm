@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Table Example</title>
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/About.css">
+    <link rel="stylesheet" href="/CSS/Item.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/Bieudogiohang.css">
+    <link rel="stylesheet" href="/CSS/Câu hỏi.css">
+    <link rel="stylesheet" href="/CSS/Profile.css">
+    <link rel="stylesheet" href="/CSS/ChiTietProduct.css">
+</head>
+
+<body>
+    
+
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="Home.html" class="logo">AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="Product.html">Product</a>
+            <a href="ChuyenCoin.html">Transaction</a>
+            <a href="KetNoiViSol.html">Wallet connection</a>
+            <a href="Lịch Sử Giao Dịch Coin.html">Transaction history</a>
+        </nav>
+        <div class="icons">
+            <a href="Chi Tiết Giỏ Hàng.html" class="fas fa-heart"></a>
+            <a href="Chi Tiết Giỏ Hàng.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user profile-icon"></a> <!-- Link đến trang profile -->
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <h1>CryptoPunks</h1>
+        <div class="product-info">
+          <img src="/images/NFT12.jfif" alt="Product Image" class="product-image">
+          <p class="product-description">
+            CryptoPunks là một trong những dự án NFT đầu tiên và nổi tiếng nhất. Nó bao gồm 10,000 hình ảnh nhỏ dạng pixel, mỗi hình là một nhân vật độc đáo với các đặc điểm khác nhau. Mỗi CryptoPunk là duy nhất và có thể được sở hữu bởi một người thông qua blockchain Ethereum. Giá trị của các CryptoPunks đã tăng đáng kể theo thời gian, với một số bán ra với giá hàng triệu đô la.</p>
+        </div>
+        <p class="product-description">Thời gian phát hành: ngày 23 tháng 6 năm 2017</p>
+        <p class="product-description">Người sáng tạo: John Watkinson và Matt Hall</p>
+        <p class="product-price">Giá: $99.99</p>
+        <a href="javascript:void(0);" class="buy-button">Mua ngay</a>
+      </div>
+
+    <!-- footer section starts -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <nav class="box">
+                <h3> Quick links </h3>
+                <a href="#home"> Home </a>
+                <a href="#about"> Trailer </a>
+                <a href="#products"> Products </a>
+                <a href="#review"> Review </a>
+                <a href="#contact"> Contact </a>
+            </nav>
+
+            <div class="box">
+                <h3> Extra links </h3>
+                <a href="#"> My account </a>
+                <a href="#"> My order </a>
+                <a href="#"> My favorite </a>
+            </div>
+
+            <div class="box">
+                <h3> Locations </h3>
+                <a href="#"> VietNam </a>
+                <a href="#"> USA </a>
+                <a href="#"> Japan </a>
+                <a href="#"> France </a>
+                <a href="#"> Korea </a>
+            </div>
+
+            <div class="box">
+                <h3> Contact Info </h3>
+                <a href="#"> +123-456-7890 </a>
+                <a href="#"> namdmps23583@gmail.com </a>
+                <a href="#"> numba, Vietnam - 24112003 </a>
+                <img src="images/6529a74c68df9e3fbe26892cffd19862.jpg" alt="">
+            </div>
+        </div>
+        <div class="credit"> Created by <span> Dương Minh Nam Designer </span> All rights reseved </div>
+        <!-- <input type="checkbox" class="checkbox"> -->
+
+    </section>
+    <!-- footer section ends -->
+
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script>
+        // Kiểm tra xem Phantom Wallet có sẵn không
+        const { Connection, PublicKey, Transaction, clusterApiUrl } = solanaWeb3;
+        const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+
+        async function connectPhantomWallet() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    await window.solana.connect();
+                    const provider = window.solana;
+                    console.log('Connected with Public Key:', provider.publicKey.toString());
+                    return provider;
+                } catch (err) {
+                    console.error('Connection to Phantom Wallet failed', err);
+                    return null;
+                }
+            } else {
+                console.log('Phantom wallet not found');
+                return null;
+            }
+        }
+        window.Buffer = window.Buffer || require('buffer').Buffer;
+        async function makeTransaction() {
+            const provider = await connectPhantomWallet();
+            if (!provider) return;
+
+            try {
+                const fromPubkey = provider.publicKey;
+                const toPubkey = new PublicKey('EgmqqP43XSrtWi2jvSmE2fuXZxEdUtuLsd5pi8j2fxVo'); // Địa chỉ ví đích
+
+                const transaction = new Transaction().add(
+                    solanaWeb3.SystemProgram.transfer({
+                        fromPubkey,
+                        toPubkey,
+                        lamports: 1 * solanaWeb3.LAMPORTS_PER_SOL, // Số SOL cần gửi, bạn cần điều chỉnh
+                    })
+                );
+
+                transaction.feePayer = fromPubkey;
+                let { blockhash } = await connection.getRecentBlockhash();
+                transaction.recentBlockhash = blockhash;
+
+                const signedTransaction = await provider.signTransaction(transaction);
+                const signature = await connection.sendRawTransaction(signedTransaction.serialize());
+                await connection.confirmTransaction(signature);
+
+                console.log('Transaction sent:', signature);
+            } catch (err) {
+                console.error('Transaction failed', err);
+            }
+        }
+
+        document.querySelector('.buy-button').addEventListener('click', makeTransaction);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Hỏi Thường Gặp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #444;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            color: #333;
+        }
+        .faq {
+            margin: 20px 0;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        .faq-question {
+            cursor: pointer;
+            position: relative;
+            padding-right: 25px;
+            font-weight: bold;
+        }
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 0;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .faq-item.active .faq-question:after {
+            content: '-';
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>CryptoCoin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Lịch Sử Giao Dịch</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Câu Hỏi Thường Gặp</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">CryptoCoin là gì?</div>
+                    <div class="faq-answer">
+                        CryptoCoin là một loại tiền điện tử được thiết kế để hoạt động như một phương tiện trao đổi sử dụng mật mã để bảo đảm các giao dịch, kiểm soát việc tạo ra các đơn vị bổ sung, và xác minh việc chuyển giao tài sản.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Làm thế nào để mua CryptoCoin?</div>
+                    <div class="faq-answer">
+                        Bạn có thể mua CryptoCoin trên các sàn giao dịch tiền điện tử bằng cách sử dụng tiền tệ fiat hoặc các loại tiền điện tử khác.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Lợi ích của việc sử dụng CryptoCoin là gì?</div>
+                    <div class="faq-answer">
+                        CryptoCoin mang lại nhiều lợi ích, bao gồm phí giao dịch thấp, tốc độ giao dịch nhanh chóng, tính bảo mật cao và khả năng giao dịch toàn cầu.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Cách theo dõi giá tiền mã hóa</div>
+                    <div class="faq-answer">
+                        Cách dễ dàng nhất để theo dõi giá tiền mã hóa mới nhất, khối lượng giao dịch, xu hướng của altcoin và vốn hóa thị trường là Danh mục tiền mã hóa Binance. Nhấp vào các coin để biết giá lịch sử, khối lượng giao dịch trong 24 giờ và giá của các loại tiền mã hóa như Bitcoin, Ethereum, BNB và các loại tiền mã hóa khác trong thời gian thực.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Cách sinh lời từ tiền mã hóa trên Binance</div>
+                    <div class="faq-answer">
+                        Người dùng có thể kiếm phần thưởng từ hơn 180 loại tiền mã hóa bằng cách sử dụng một trong những sản phẩm được cung cấp trên Binance Earn. Nền tảng của chúng tôi cung cấp nhiều tài sản kỹ thuật số như Bitcoin, Ethereum và các stablecoin.
+                    </div>
+                </div>
+                <!-- Thêm các mục FAQ khác tương tự ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

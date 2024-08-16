@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 100px;
+   
+}
+p{
+    font-size: 2rem;
+    font-family: 'Merienda One',cursive;
+}
+
+h1 {
+    color: #333;
+    place-items: center;
+    display: grid;
+    font-family: 'Merienda One',cursive;
+}
+
+.product-image {
+    width: 30%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+.product-image:hover{
+    transform: scale(1.4);
+}
+.product-info {
+    display: flex;
+    
+    margin-bottom: 20px;
+    margin: 10px;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 20px;
+    
+}
+
+.product-price {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.5);
+}

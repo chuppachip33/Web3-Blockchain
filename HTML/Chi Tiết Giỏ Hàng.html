@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập NFT</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/About.css">
+    <link rel="stylesheet" href="/CSS/Item.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/Bieudogiohang.css">
+    <link rel="stylesheet" href="/CSS/Câu hỏi.css">
+    <link rel="stylesheet" href="/CSS/Chi Tiết Giỏ Hàng.css">
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="Home.html" class="logo">AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="Product.html">Product</a>
+            <a href="ChuyenCoin.html">Transaction</a>
+            <a href="KetNoiViSol.html">Wallet connection</a>
+            <a href="Lịch Sử Giao Dịch Coin.html">Transaction history</a>
+        </nav>
+        <div class="icons">
+            <a href="Chi Tiết Giỏ Hàng.html" class="fas fa-heart"></a>
+            <a href="Chi Tiết Giỏ Hàng.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user profile-icon"></a> <!-- Link đến trang profile -->
+        </div>
+    </header>
+
+    <h1>Bộ Sưu Tập NFT của Tôi</h1>
+    <div class="nft-container" id="nftContainer">
+        <!-- Các NFT sẽ được hiển thị ở đây -->
+    </div>
+
+    <script>
+        // Dữ liệu mẫu về các NFT
+        const nftData = [
+            {
+                title: "CryptoPunk #1",
+                date: "2023-01-15",
+                price: "1.5 ETH",
+                imageUrl: "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/4/7/photo-1-16493154246941061082285.jpg"
+            },
+            {
+                title: "Bored Ape #2",
+                date: "2023-02-10",
+                price: "2.0 ETH",
+                imageUrl: "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/4/7/photo-1-16493154246941061082285.jpg"
+            },
+            {
+                title: "Art Blocks #3",
+                date: "2023-03-05",
+                price: "3.0 ETH",
+                imageUrl: "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/4/7/photo-1-16493154246941061082285.jpg"
+            }
+        ];
+
+        // Hàm để tạo ra các phần tử HTML hiển thị NFT
+        function displayNFTs() {
+            const nftContainer = document.getElementById('nftContainer');
+            nftData.forEach(nft => {
+                const nftItem = document.createElement('div');
+                nftItem.className = 'nft-item';
+
+                nftItem.innerHTML = `
+                    <img src="${nft.imageUrl}" alt="${nft.title}" class="nft-image">
+                    <div class="nft-details">
+                        <h2 class="nft-title">${nft.title}</h2>
+                        <p class="nft-meta">Ngày mua: ${nft.date}</p>
+                        <p class="nft-meta">Giá mua: ${nft.price}</p>
+                    </div>
+                    
+                    <button class="transfer-button" onclick="transferNFT('${nft.title}')">Chuyển NFT</button>
+                    
+                    <button class="sell-button" onclick="sellNFT('${nft.title}')">Bán</button>
+                `;
+
+                nftContainer.appendChild(nftItem);
+            });
+        }
+
+        // Hàm để xử lý hành động chuyển NFT
+        function transferNFT(title) {
+            // Hiện thông báo khi nút chuyển NFT được nhấn
+            alert(`Chuyển NFT: ${title}`);
+            // Ở đây bạn có thể thêm logic để thực hiện hành động chuyển NFT, ví dụ: gửi yêu cầu đến một API
+        }
+
+        // Hàm để xử lý hành động bán NFT
+        function sellNFT(title) {
+            // Hiện thông báo khi nút bán NFT được nhấn
+            alert(`Bán NFT: ${title}`);
+            // Ở đây bạn có thể thêm logic để thực hiện hành động bán NFT, ví dụ: gửi yêu cầu đến một API
+        }
+
+        // Hiển thị các NFT khi trang được tải
+        displayNFTs();
+    </script>
+
+</body>
+
+</html>

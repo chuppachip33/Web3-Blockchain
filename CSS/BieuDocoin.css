@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    
+}
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1000px;
+    
+}
+#chartContainer {
+    position: relative;
+    width: 70%;
+}
+#coinChart {
+    width: 100%;
+    height: auto;
+}
+#icon {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 50px; /* Đặt kích thước icon */
+    height: 50px;
+}
+#inputContainer {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+#inputContainer h3 {
+    margin-top: 0;
+}
+#inputContainer input, #inputContainer button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+#inputContainer button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    
+}
+#inputContainer button:hover {
+    background-color: #218838;
+}

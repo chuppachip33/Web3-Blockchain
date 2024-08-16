@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ giá coin theo thời gian thực</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link css-->
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/About.css">
+    <link rel="stylesheet" href="/CSS/Item.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS//BieuDocoin.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="Home.html" class="logo"> AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home"> Home </a>
+            <a href="Product.html"> Product </a>
+            <a href="ChuyenCoin.html"> Transaction </a>
+            <a href="KetNoiViSol.html"> Wallet connection </a>
+            <a href="Lịch Sử Giao Dịch Coin.html"> Transaction history </a>
+        </nav>
+        <div class="icons">
+            <a href="Giohang.html" class="fas fa-heart"></a>
+            <a href="ChiTietGioHang.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+
+
+    <div id="mainContainer">
+        <div id="chartContainer">
+            <canvas id="coinChart"></canvas>
+            <img id="icon" src="/Images/bitcoin.jfif" alt="icon"> <!-- Đặt URL của icon -->
+        </div>
+        <div id="inputContainer">
+            <h3>Mua Coin</h3>
+            <input type="number" id="quantity" placeholder="Nhập số lượng" min="1">
+            <button onclick="buyCoin()">Mua</button>
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        // Dữ liệu ban đầu cho biểu đồ giá coin
+        const initialLabels = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7"];
+        const initialData = [65, 59, 80, 81, 56, 55, 40];
+
+        const data = {
+            labels: initialLabels,
+            datasets: [{
+                label: 'Giá Coin',
+                data: initialData,
+                borderColor: [],
+                borderWidth: 2,
+                fill: false,
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: 'rgb(54, 162, 235)'
+                        }
+                    }
+                },
+                elements: {
+                    line: {
+                        tension: 0.4 // Đường cong mượt mà hơn
+                    },
+                    point: {
+                        radius: 0 // Ẩn các điểm dữ liệu
+                    }
+                }
+            }
+        };
+
+        window.onload = function() {
+            const ctx = document.getElementById('coinChart').getContext('2d');
+            const coinChart = new Chart(ctx, config);
+
+            // Hàm tạo giá ngẫu nhiên cho coin
+            function getRandomPrice(currentPrice) {
+                const volatility = 2; // Thay đổi giá trị này để điều chỉnh độ biến động
+                const change = (Math.random() - 0.5) * volatility * 2;
+                return Math.max(currentPrice + change, 0); // Đảm bảo giá không bị âm
+            }
+
+            // Cập nhật dữ liệu biểu đồ định kỳ
+            setInterval(function() {
+                const newPrice = getRandomPrice(data.datasets[0].data[data.datasets[0].data.length - 1]);
+                data.labels.push(new Date().toLocaleTimeString());
+
+                const lastIndex = data.datasets[0].data.length - 1;
+                const lastPrice = data.datasets[0].data[lastIndex];
+                if (newPrice > lastPrice) {
+                    data.datasets[0].borderColor.push('rgba(75, 192, 192, 1)'); // Màu xanh lá cho tăng
+                } else {
+                    data.datasets[0].borderColor.push('rgba(255, 99, 132, 1)'); // Màu đỏ cho giảm
+                }
+
+                data.datasets[0].data.push(newPrice);
+
+                if (data.datasets[0].data.length > 10) {
+                    data.datasets[0].data.shift();
+                    data.labels.shift();
+                    data.datasets[0].borderColor.shift();
+                }
+
+                coinChart.update();
+            }, 5000); // Cập nhật mỗi 2 giây
+        };
+
+        function buyCoin() {
+            const quantity = document.getElementById('quantity').value;
+            if (quantity && quantity > 0) {
+                alert('Bạn đã mua ' + quantity + ' coin.');
+            } else {
+                alert('Vui lòng nhập số lượng hợp lệ.');
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import"home.css";
+@import"about.css";
+@import"contact.css";
+@import"icon.css";
+@import"products.css";
+@import"review.css";
+@import"GioHang.css";
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --pink: #e84393;
+    --black: #333;
+    --denbong: rgba(0, 0 ,0, .1);
+    --denbong1: rgba(0, 0 ,0, .3);
+    --denbong2: rgba(255, 52, 153, .05);
+    --trang: #fff;
+    --xam: #999;
+    --xam1: #666;
+    --xam2: #fff7;
+    --do: red;
+    --xanh: blue;
+    --hong: #ffb6ed;
+    --hongbong:rgb(250, 202, 202);
+    --hongbong1:rgb(252, 181, 181);
+    --hongbong2:rgb(248, 156, 156);
+    --xanhla:#006803;
+    --xanhla2:#abffb0;
+    --vang:yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    padding: 1rem;
+    margin: 2rem 0;
+    background: var(--denbong2);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--black);
+    color: var(--trang);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+    transform: scale(1.5);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:var(--trang);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem var(--denbong);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: var(--black);
+    font-weight: bolder;
+    
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: var(--xam1);
+    
+    
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+    transform: scale(1.1);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-left: 1.5rem;
+    
+}
+
+header .icons a:hover {
+    color: var(--pink);
+    transform: scale(1.1);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--trang);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid var(--denbong1);
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media(max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--trang);
+        border-top: .1rem var(--denbong);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: var(--trang);
+        border: .1rem var(--denbong);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-conttainer .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons-conttainer .icons span {
+        font-size: 1.7rem;
+    }
+
+
+}
+
+@media(max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+/* .checkbox {
+    height: 50px;
+    width: 100px;
+    background: #222;
+    appearance: none;
+    border-radius: 160px;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.checkbox::before{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 160px;
+    transform: scale(0.9);
+    transition: 0.5s;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                inset 4px 4px rgba(255, 255, 255, 0.2),
+                inset -4px 4px rgba(255, 255, 255, 0.2)
+}
+.checkbox:checked{
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.05)
+}
+.checkbox:checked::before{
+    left: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+                inset 4px 4px rgba(255, 255, 255, 1),
+                inset -4px 4px rgba(255, 255, 255, 1);
+                background: linear-gradient(to bottom,#eaeaea,#f9f9f9);
+}
+.checkbox::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    height: 100vw;
+    background: #2b2b2b;
+    top: 80px;
+    left: 160px;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+}
+.checkbox:checked::after{
+    background: #f8f8f8;
+} */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chọn Biểu Tượng</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link css-->
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Home.css">
+    <link rel="stylesheet" href="/CSS/About.css">
+    <link rel="stylesheet" href="/CSS/Item.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/Bieudogiohang.css">
+    <link rel="stylesheet" href="/CSS/ChuyenCoin.css">
+</head>
+<body>
+
+
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="Home.html" class="logo"> AEVOLT <span>.</span></a>
+        <nav class="navbar">
+            <a href="#home"> Home </a>
+            <a href="Product.html"> Product </a>
+            <a href="ChuyenCoin.html"> Transaction </a>
+            <a href="KetNoiViSol.html"> Wallet connection </a>
+            <a href="Lịch Sử Giao Dịch Coin.html"> Transaction history </a>
+        </nav>
+        <div class="icons">
+            <a href="Giohang.html" class="fas fa-heart"></a>
+            <a href="ChiTietGioHang.html" class="fas fa-shopping-cart"></a>
+            <a href="Profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>NFT Giao dịch</h1>
+        <div class="icon-selector-container">
+            <div class="icon-section">
+                <div class="icon-selector" onclick="toggleIconList('icon-list-1')">
+                    Chọn NFT 1
+                </div>
+                <div class="icon-list" id="icon-list-1">
+                    <div class="icon-item" onclick="selectIcon('icon1', 'selected-icon-1')">
+                        <img src="/Images/NFT4.jfif" alt="Icon 1">
+                        <span>NFT 1</span>
+                    </div>
+                    <div class="icon-item" onclick="selectIcon('icon2', 'selected-icon-1')">
+                        <img src="/Images/NFT6.jfif" alt="Icon 2">
+                        <span>NFT 2</span>
+                    </div>
+                    <div class="icon-item" onclick="selectIcon('icon3', 'selected-icon-1')">
+                        <img src="/Images/NFT9.jfif" alt="Icon 3">
+                        <span>NFT 3</span>
+                    </div>
+                </div>
+                <div id="selected-icon-1">
+                    <!-- Selected icon details will be displayed here -->
+                </div>
+            </div>
+
+            <div class="arrow">
+                ➔
+            </div>
+
+            <div class="icon-section">
+                <div id="selected-icon-2" class="selected-icon">
+                    <!-- Selected icon details will be displayed here -->
+                </div>
+                <!-- <div class="icon-selector" onclick="confirmConversion()">
+                    Xác Nhận Chuyển Đổi
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Chuyển đổi thành công!</p>
+            </div>
+        </div>
+        
+        <!-- Overlay -->
+        <div id="overlay"></div>
+    </div>
+
+    <script src="/JS/ChuyenCoin.js"></script>
+
+    
+</body>
+</html>
